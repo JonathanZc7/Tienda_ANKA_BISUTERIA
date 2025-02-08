@@ -9,7 +9,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    color: #ff7043;
+    color: #b113ab;
 }
 
 img {
@@ -19,12 +19,12 @@ img {
 }
 
 header {
-    background-color: #ff6f61;
+    background-color: #d2c0be;
     color: white;
     padding: 20px;
     text-align: center;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    border-bottom: 4px solid #ff7043;
+ 
 }
 
 header h1 {
@@ -162,7 +162,7 @@ section {
     text-align: right;
     font-size: 1.4em;
     font-weight: bold;
-    color: #ff7043;
+    color: #efe3e0;
 }
 
 .carrito button {
@@ -179,7 +179,7 @@ section {
 }
 
 .carrito button:hover {
-    background-color: #e64a19;
+    background-color: #abe8b4;
 }
 
 .payment-buttons {
