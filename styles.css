@@ -1,69 +1,162 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+}
+
+h1, h2 {
     text-align: center;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 header {
-    background-color: #d4af37;
-    color: white;
-    padding: 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 nav ul {
-    list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
+    list-style: none;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#inicio {
+    text-align: center;
+}
+
 .galeria {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .producto img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
+    max-width: 80%;
+    border-radius: 8px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.producto p {
+    margin: 10px 0;
 }
 
-input, textarea, button {
-    margin: 10px;
+.producto button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
     padding: 10px;
-    width: 80%;
-    max-width: 400px;
-}
-html {
-    scroll-behavior: smooth;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-section {
-    padding: 50px;
-    min-height: 100vh;
+.producto button:hover {
+    background-color: #e60000;
 }
 
-h1 {
-    font-family: "Brush Script MT", cursive;
-    font-size: 48px;
+.carrito {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carrito h3 {
     text-align: center;
-    color: #760980; /* Color dorado para bisutería artesanal */
+}
+
+.carrito ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carrito ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.carrito .total {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.payment-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.payment-buttons button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.payment-buttons button:hover {
+    background-color: #e60000;
+}
+
+.img-whatsapp {
+    width: 50px;
+    height: 50px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 100%;
+    }
 }

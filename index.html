@@ -7,106 +7,6 @@
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=tu_id_de_cliente&currency=USD"></script> <!-- Reemplaza tu ID de cliente de PayPal -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        header {
-            background-color: #f8f8f8;
-            padding: 20px;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .producto {
-            width: 23%;
-            margin: 10px 0;
-            text-align: center;
-        }
-
-        .producto img {
-            max-width: 100%;
-        }
-
-        .payment-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Estilos para pantallas pequeñas */
-        @media (max-width: 600px) {
-            .producto {
-                width: 100%;
-            }
-        }
-
-        /* Estilos para el carrito */
-        .carrito {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-        }
-
-        .carrito h3 {
-            margin-top: 0;
-        }
-
-        .carrito ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .carrito ul li {
-            display: flex;
-            justify-content: space-between;
-            margin: 5px 0;
-        }
-
-        .carrito .total {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -124,7 +24,7 @@
     <section id="inicio">
         <h2>Bienvenidos a nuestra tienda</h2>
         <p>Descubre nuestra colección única de bisutería hecha a mano con amor.</p>
-        <img src="tienda.png" alt="Imagen de la tienda" width="40%">
+        <img src="tienda.png" alt="Imagen de la tienda" class="img-tienda">
     </section>
     
     <section id="productos">
@@ -180,7 +80,7 @@
         <!-- WhatsApp Link -->
         <p>O chatea con nosotros por WhatsApp:</p>
         <a href="https://wa.me/593980311220" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="img-whatsapp">
         </a>
     </section>
     
@@ -190,7 +90,7 @@
 
     <!-- Stripe -->
     <script type="text/javascript">
-        var stripe = Stripe('tu_clave_publica_de_stripe'); // Coloca tu clave pública de Stripe
+        var stripe = Stripe('tu_clave_publica_de_stripe');
         var carrito = [];
 
         function agregarAlCarrito(nombre, precio) {
@@ -255,7 +155,6 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     alert('Pago realizado con éxito: ' + details.payer.name.given_name);
-                    // Aquí puedes agregar lógica para actualizar el estado de tu orden
                 });
             },
             onError: function(err) {
